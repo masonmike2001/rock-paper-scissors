@@ -10,13 +10,10 @@
             switch(choice) {
                 case 1:
                     return "rock";
-                    break;
                 case 2:
                     return "paper";
-                    break;
                 case 3:
                     return "scissors";
-                    break;
             }
         }
 
@@ -76,10 +73,10 @@
         {
             let playerScore = 0;
             let computerScore = 0;
-            for (i = 0; i < 5; i++)
+
                 //runs until a player reaches victory threshold
-            {
-                let playerSelection = prompt("What is your choice: (Rock) (Paper) (Scissors)");
+
+                //let playerSelection = prompt("What is your choice: (Rock) (Paper) (Scissors)");
                 playerSelection = playerSelection.toLowerCase();
                 let computerSelection = getComputerChoice();
                 if (playRound(playerSelection, computerSelection) == 0)
@@ -92,7 +89,6 @@
                 {
                     computerScore++;
                 }
-            }
             console.log("Player has " + playerScore + " points and Computer has " + computerScore + " points.")
 
             if (playerScore > computerScore)
@@ -100,7 +96,7 @@
                 console.log("Player wins! Congratulations!");
             }
 
-            else if (computerScore >= playerScore)
+            else if (computerScore > playerScore)
             {
                 console.log("Computer wins! Whoopsies!");
             }
