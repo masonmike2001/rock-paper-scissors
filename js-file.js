@@ -33,13 +33,10 @@ function checkForWinner()
 
 function gameOver()
 {
-    rockButton.removeEventListener('click', () => playRound('rock'));
-    paperButton.removeEventListener('click', () => playRound('rock'));
-    scissorsButton.removeEventListener('click', () => playRound('rock'));
     rockButton.textContent = "RESTART";
     paperButton.textContent = "RESTART";
     scissorsButton.textContent = "RESTART";
-    gameOver = true;
+    isGameOver = true;
 }
         
 function getComputerChoice() 
@@ -62,7 +59,7 @@ function getComputerChoice()
 
 function playRound(playerSelection)
 {
-    if (gameOver == true)
+    if (isGameOver == true)
     {
         playerScore = 0;
         computerScore = 0
@@ -72,7 +69,7 @@ function playRound(playerSelection)
         paperButton.textContent = "📄";
         scissorsButton.textContent = "✂️";
         message.textContent = "Here we go again!"
-        gameOver = false;
+        isGameOver = false;
         return;
     }
     let computerSelection = getComputerChoice();
