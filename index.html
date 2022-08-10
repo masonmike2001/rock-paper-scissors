@@ -5,33 +5,37 @@
         <meta charset = "UTF-8">
         <title>Rock Paper Scissors</title>
         <link rel="stylesheet" href="style.css">
-        <script src="js-file.js"></script>
+        <script src="js-file.js" defer></script>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=EB+Garamond" />
     </head>
     <body>
         <div class="header">
-            <h3>m.RPS</h3>
-            <p>Welcome to Rock Paper Scissors! Select any of the buttons in the center to start.</p>
+            <h3>mram.RPS</h3>
+            <p>Welcome to Rock Paper Scissors! Select any of the buttons in the center to start a game.</p>
         </div>
         <div class="middle-row">
-            <div class="player">
+            <div id="player">
                 <h4>Player:</h4>
-                <h1 class="score">0</h1>
+                <h1 id="scoreP">0</h1>
 
 
             </div>
             <div class="buttons">
-                <button>Rock</button>
-                <button>Paper</button>
-                <button>Scissors</button>
-                <h1>Ready to play?</h1>
+                <button id="rock">🪨</button>
+                <button id="paper">📄</button>
+                <button id="scissors">✂️</button>
+
             </div>
-            <div class="computer">
+            <div id="computer">
                 <h4>Computer:</h4>
-                <h1 class="score">0</h1>
+                <h1 id="scoreC">0</h1>
+
             </div>
         </div>
-
+        <div class="bottom">
+            <h1 id="footer">May the best player win!</h1>
+                            
+        </div>
         
     </body>
 </html>
