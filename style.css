@@ -38,7 +38,7 @@ p {
     justify-content: center;
     align-items: center;
 
-    margin-top: -80px;
+    margin-top: -60px;
           
     background-color: #FF715B;
 }
@@ -85,7 +85,7 @@ h4 {
 }
 
 button {
-    width: 200px;
+    width: 500px;
     height: 100px;
 
     border-radius: 25px;
@@ -94,7 +94,7 @@ button {
     background-color: #2eb1e1;
     color: white;
 
-    font-size: 34px;
+    font-size: 60px;
     font-weight: bold;
 
     transition: width 0.7s, height 1.4s;
@@ -121,6 +121,17 @@ h1 {
     margin-top: 80px;
 }
 
+.score-winner {
+    color: green;
+}
+
+.score-loser {
+    color: red;
+}
+
+.score-draw {
+    color: yellow;
+}
 /*
 bottom
 */
@@ -139,9 +150,8 @@ bottom
     color: #ffffff;
     text-shadow: 2px 2px #656565;
 
-    margin-right: -80px;
-    margin-left: -8px;
-    margin-top: 80px;
+    text-align: center;
+    margin-top: 40px;
   
     text-decoration: underline; 
     font-size: 60px;

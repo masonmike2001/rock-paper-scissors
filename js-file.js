@@ -21,12 +21,14 @@ function checkForWinner()
 {
     if (playerScore >= 5)
     {
-        message.textContent = "Player wins! Congratulations!";
+        message.textContent = "Game over!";
+        alert("Player wins! Congratulations, you should be very proud.");
         gameOver();
     }
     else if (computerScore >= 5)
     {
-        message.textContent ="Computer wins! Whoopsies!";
+        message.textContent ="Game over!";
+        alert("Computer wins! Whoopsies!");
         gameOver();
     }
 }
@@ -76,12 +78,16 @@ function playRound(playerSelection)
     if (playerSelection == "rock" && computerSelection == "rock")
     {
         message.textContent = "Rock and rock! Draw!";
+        playerScoreText.className = "score-draw";
+        compScoreText.className = "score-draw";
     }
     if (playerSelection == "rock" && computerSelection == "paper")
     {
         computerScore++;
         message.textContent = "Paper beats rock! Computer wins!";
         compScoreText.textContent = computerScore;
+        playerScoreText.className = "score-loser";
+        compScoreText.className = "score-winner";
         checkForWinner();
     }
     if (playerSelection == "rock" && computerSelection == "scissors")
@@ -89,6 +95,8 @@ function playRound(playerSelection)
         playerScore++;
         message.textContent = "Rock beats scissors! Player wins!";
         playerScoreText.textContent = playerScore;
+        playerScoreText.className = "score-winner";
+        compScoreText.className = "score-loser";
         checkForWinner();
     }
 
@@ -97,17 +105,23 @@ function playRound(playerSelection)
         playerScore++;
         message.textContent = "Paper beats rock! Player wins!";
         playerScoreText.textContent = playerScore;
+        playerScoreText.className = "score-winner";
+        compScoreText.className = "score-loser";
         checkForWinner();
     }
     if (playerSelection == "paper" && computerSelection == "paper")
     {
         message.textContent = "Paper and paper! Draw!";
+        playerScoreText.className = "score-draw";
+        compScoreText.className = "score-draw";
     }
     if (playerSelection == "paper" && computerSelection == "scissors")
     {
         computerScore++;
         message.textContent = "Scissors beats paper! Computer wins!";
         compScoreText.textContent = computerScore;
+        playerScoreText.className = "score-loser";
+        compScoreText.className = "score-winner";
         checkForWinner();
     }
 
@@ -116,6 +130,8 @@ function playRound(playerSelection)
         computerScore++;
         message.textContent = "Rock beats scissors! Computer wins!";
         compScoreText.textContent = computerScore;
+        playerScoreText.className = "score-loser";
+        compScoreText.className = "score-winner";
         checkForWinner();
     }
     if (playerSelection == "scissors" && computerSelection == "paper")
@@ -123,11 +139,15 @@ function playRound(playerSelection)
         playerScore++;
         message.textContent = "Scissors beats paper! Player wins!";
         playerScoreText.textContent = playerScore;
+        playerScoreText.className = "score-winner";
+        compScoreText.className = "score-loser";
         checkForWinner();
     }
     if (playerSelection == "scissors" && computerSelection == "scissors")
     {
         message.textContent = "Scissors and scissors! Draw!";
+        playerScoreText.className = "score-draw";
+        compScoreText.className = "score-draw";
     }
     return;
 }
